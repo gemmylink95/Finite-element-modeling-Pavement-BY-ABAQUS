@@ -1,0 +1,16 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">cantelverjob</jobName><clientHost type="string">mohamed-PC</clientHost><handle type="integer">0</handle></Started>
+<Warning><message type="string">Boundary conditions are specified on inactive dof of 1 nodes. The nodes have been identified in node set WarnNodeBCInactiveDof.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">cantelverjob</jobName></Warning>
+<Odb_File><file type="string">C:\temp\cantelverjob.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">cantelverjob</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">cantelverjob</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName><clientHost type="string">mohamed-PC</clientHost><handle type="integer">8048</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Odb_Frame>
+<Warning><message type="string">THERE ARE 2 UNCONNECTED REGIONS IN THE MODEL.</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Warning>
+<MEMORY_ESTIMATE><memory type="float">84</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">3958</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">22</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></MINIMUM_MEMORY>
+<Odb_Frame><step type="integer">0</step><frame type="integer">1</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Odb_Frame>
+<Status><step type="integer">1</step><increment type="integer">1</increment><attempts type="integer">1</attempts><severe type="integer">0</severe><equilibrium type="integer">1</equilibrium><iterations type="integer">1</iterations><totalTime type="float">1</totalTime><stepTime type="float">1</stepTime><timeIncrement type="float">1</timeIncrement><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Status>
+<End_Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></End_Step>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">cantelverjob</jobName></Completed>
+<JOB_COMPLETED><jobName type="string">cantelverjob</jobName><time type="string">Sat Nov 06 23:15:57 2021</time></JOB_COMPLETED></msgwrapper>

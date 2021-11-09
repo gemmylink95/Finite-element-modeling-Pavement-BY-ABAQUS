@@ -1,0 +1,22 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB layerdsoil
+Abaqus 3DEXPERIENCE R2017x
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server localhost.
+<1019 out of 1024 licenses remain available>.
+Begin Analysis Input File Processor
+11/8/2021 11:08:19 AM
+Run pre.exe
+11/8/2021 11:08:38 AM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+11/8/2021 11:08:38 AM
+Run standard.exe
+11/8/2021 11:08:52 AM
+End Abaqus/Standard Analysis
+Begin MFS->SFS and SIM cleanup
+11/8/2021 11:08:53 AM
+Run SMASimUtility.exe
+11/8/2021 11:08:54 AM
+End MFS->SFS and SIM cleanup
+Abaqus JOB layerdsoil COMPLETED

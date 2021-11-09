@@ -1,0 +1,484 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=100.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(30.0, 7.0))
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    12.4792728424072, 10.3406763076782), value=30.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -6.02742910385132, 3.95019245147705), value=7.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 3.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 3.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 3.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 3.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], ), side=RIGHT)
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], ), side=RIGHT)
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[7], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[9], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[9], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=1.0, objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[10], ), side=LEFT)
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -18.2801380157471, -1.25563383102417), value=1.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[15], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[13])
+mdb.models['Model-1'].sketches['__profile__'].VerticalDimension(textPoint=(
+    -18.6933708190918, 2.41028738021851), value=1.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[7], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[5])
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 6.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='sand')
+mdb.models['Model-1'].materials['sand'].Density(table=((1900.0, ), ))
+mdb.models['Model-1'].materials['sand'].Elastic(table=((13780.0, 0.3), ))
+mdb.models['Model-1'].materials['sand'].Permeability(inertialDragCoefficient=
+    0.142887, specificWeight=9810.0, table=((6.0, 0.8), ))
+mdb.models['Model-1'].Material(name='Claylayer1')
+mdb.models['Model-1'].materials['Claylayer1'].Density(table=((1900.0, ), ))
+mdb.models['Model-1'].materials['Claylayer1'].PorousElastic(table=((0.01, 0.28, 
+    0.0), ))
+mdb.models['Model-1'].materials['Claylayer1'].ClayPlasticity(intercept=None, 
+    table=((0.1174, 1.5, 18000.0, 1.0, 1.0), ))
+mdb.models['Model-1'].materials['Claylayer1'].Permeability(
+    inertialDragCoefficient=0.142887, specificWeight=9810.0, table=((6e-12, 
+    1.5), ))
+mdb.models['Model-1'].Material(name='Claylayer2', objectToCopy=
+    mdb.models['Model-1'].materials['Claylayer1'])
+mdb.models['Model-1'].materials['Claylayer2'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 27500.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer3', objectToCopy=
+    mdb.models['Model-1'].materials['Claylayer2'])
+mdb.models['Model-1'].materials['Claylayer3'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 36600.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer4', objectToCopy=
+    mdb.models['Model-1'].materials['Claylayer3'])
+mdb.models['Model-1'].materials['Claylayer4'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 46500.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer5', objectToCopy=
+    mdb.models['Model-1'].materials['Claylayer4'])
+mdb.models['Model-1'].materials['Claylayer5'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 55140.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer6', objectToCopy=
+    mdb.models['Model-1'].materials['Claylayer5'])
+mdb.models['Model-1'].materials['Claylayer6'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 64300.0, 1.0, 1.0), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='sand', name='sand', 
+    thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer1', name=
+    'clayclayer-1', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer2', name=
+    'claylayer2', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer3', name=
+    'claylayer-3', thickness=None)
+mdb.models['Model-1'].sections.changeKey(fromName='claylayer2', toName=
+    'claylayer-2')
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer4', name=
+    'claylayer-4', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer5', name=
+    'claylayer-5', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='Claylayer6', name=
+    'claylayer-6', thickness=None)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-1')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-1'], sectionName='sand', 
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#2 ]', 
+    ), ), name='Set-2')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-2'], sectionName=
+    'clayclayer-1', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#4 ]', 
+    ), ), name='Set-3')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-3'], sectionName=
+    'claylayer-2', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#8 ]', 
+    ), ), name='Set-4')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-4'], sectionName=
+    'claylayer-3', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#20 ]', 
+    ), ), name='Set-5')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-5'], sectionName=
+    'claylayer-4', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#40 ]', 
+    ), ), name='Set-6')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-6'], sectionName=
+    'claylayer-5', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#10 ]', 
+    ), ), name='Set-7')
+mdb.models['Model-1'].parts['Part-1'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-7'], sectionName=
+    'claylayer-6', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-1', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Part-1-1', ), 
+    vector=(-15.0, -7.0, 0.0))
+# Save by mohamed on 2021_11_05-23.08.01; build 2017 2016_09_27-14.54.59 126836
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].GeostaticStep(matrixSolver=DIRECT, matrixStorage=
+    UNSYMMETRIC, name='ownwieghtsoilM', nlgeom=ON, previous='Initial')
+mdb.models['Model-1'].SoilsStep(cetol=None, end=None, initialInc=1e-05, 
+    matrixSolver=DIRECT, matrixStorage=UNSYMMETRIC, maxNumInc=1, name=
+    'striplaoadingM', previous='ownwieghtsoilM', timeIncrementationMethod=FIXED
+    , timePeriod=1e-05, utol=None)
+mdb.models['Model-1'].SoilsStep(cetol=None, end=None, initialInc=0.005, 
+    matrixSolver=DIRECT, matrixStorage=UNSYMMETRIC, maxInc=100000000000.0, 
+    maxNumInc=100000, minInc=1e-08, name='consolditonM', previous=
+    'striplaoadingM', timePeriod=1000000000000.0, utol=100000.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#7f ]', ), ), name='Set-1')
+mdb.models['Model-1'].BodyForce(comp2=-9190.0, createStepName='consolditonM', 
+    name='body-forec', region=mdb.models['Model-1'].rootAssembly.sets['Set-1'])
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.54, name='__profile__', 
+    sheetSize=61.61, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(15.0, 6.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-7.7, 3.465), 
+    point2=(-7.7, -9.24))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[30])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(7.7, 4.235), point2=
+    (7.7, -8.47))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[31])
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#7f ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.5, name='__profile__', 
+    sheetSize=60.03, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(26.35, 6.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -19.628528213501, 3.43456268310547), value=13.5, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[4], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[26])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -17.3103786468506, 3.04911136627197), value=3.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[4])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].HorizontalDimension(textPoint=(
+    -19.1913400650024, 1.94660758972168), value=13.5, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[26], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[4])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+#* Nothing to undo.
+mdb.models['Model-1'].sketches['__profile__'].undo()
+#* Nothing to undo.
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=1.5, name='__profile__', 
+    sheetSize=60.03, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(26.35, 6.5, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].HorizontalDimension(textPoint=(
+    -19.1111026763916, 2.8604679107666), value=13.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[26], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[4])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+#* Nothing to undo.
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].rootAssembly.Surface(name='Surf-1', side1Edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#40 ]', ), ))
+mdb.models['Model-1'].Pressure(amplitude=UNSET, createStepName='striplaoadingM'
+    , distributionType=UNIFORM, field='', magnitude=100000.0, name=
+    'stripload100', region=
+    mdb.models['Model-1'].rootAssembly.surfaces['Surf-1'])
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#0 #10042 ]', ), ), name='Set-2')
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Initial', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='BC-1', 
+    region=mdb.models['Model-1'].rootAssembly.sets['Set-2'], u1=SET, u2=SET, 
+    ur3=UNSET)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#21084204 #a5524 ]', ), ), name='Set-3')
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Initial', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='BC-2', 
+    region=mdb.models['Model-1'].rootAssembly.sets['Set-3'], u1=SET, u2=UNSET, 
+    ur3=UNSET)
+# Save by mohamed on 2021_11_05-23.47.42; build 2017 2016_09_27-14.54.59 126836
+# Save by mohamed on 2021_11_05-23.47.47; build 2017 2016_09_27-14.54.59 126836
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].TabularAmplitude(data=((0.0, 0.0), (1.0, 0.0), (1.01, 
+    1.0), (1e+20, 1.0)), name='Amp-1', smooth=SOLVER_DEFAULT, timeSpan=TOTAL)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#48 #100c2 ]', ), ), name='Set-4')
+mdb.models['Model-1'].PorePressureBC(amplitude='Amp-1', createStepName=
+    'consolditonM', distributionType=UNIFORM, fieldName='', fixed=OFF, 
+    magnitude=0.0, name='BC-3', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-4'])
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#4003 ]', ), ), name='Set-5')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'void-rato-sandM', region=mdb.models['Model-1'].rootAssembly.sets['Set-5'], 
+    variation=CONSTANT_RATIO, voidsRatio1=1.5)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#800c ]', ), ), name='Set-6')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'void-ratio-clay1M', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-6'], variation=CONSTANT_RATIO, 
+    voidsRatio1=1.42)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#10030 ]', ), ), name='Set-7')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'void-ratioclay3M', region=mdb.models['Model-1'].rootAssembly.sets['Set-7']
+    , variation=CONSTANT_RATIO, voidsRatio1=1.37)
+mdb.models['Model-1'].predefinedFields.changeKey(fromName='void-ratioclay3M', 
+    toName='void-ratioclay2M')
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#200c0 ]', ), ), name='Set-8')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'voidratio-clay3', region=mdb.models['Model-1'].rootAssembly.sets['Set-8'], 
+    variation=CONSTANT_RATIO, voidsRatio1=1.34)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#80300 ]', ), ), name='Set-9')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'voidratio-clay4', region=mdb.models['Model-1'].rootAssembly.sets['Set-9'], 
+    variation=CONSTANT_RATIO, voidsRatio1=1.31)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#100c00 ]', ), ), name='Set-10')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'voidratio-clay5', region=mdb.models['Model-1'].rootAssembly.sets['Set-10']
+    , variation=CONSTANT_RATIO, voidsRatio1=1.29)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#43000 ]', ), ), name='Set-11')
+mdb.models['Model-1'].VoidsRatio(distributionType=UNIFORM, name=
+    'voidratio-clay6', region=mdb.models['Model-1'].rootAssembly.sets['Set-11']
+    , variation=CONSTANT_RATIO, voidsRatio1=1.27)
+# Save by mohamed on 2021_11_06-00.02.29; build 2017 2016_09_27-14.54.59 126836
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#4003 ]', ), ), name='Set-12')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-8', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-12'], stressMag1=0.0, 
+    stressMag2=-9190.0, vCoord1=0.0, vCoord2=-1.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#800c ]', ), ), name='Set-13')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-9', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-13'], stressMag1=-9190.0, 
+    stressMag2=-18380.0, vCoord1=-1.0, vCoord2=-2.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#10030 ]', ), ), name='Set-14')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-10', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-14'], stressMag1=-18380.0, 
+    stressMag2=27570.0, vCoord1=-2.0, vCoord2=-3.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#200c0 ]', ), ), name='Set-15')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-11', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-15'], stressMag1=-27570.0, 
+    stressMag2=36760.0, vCoord1=-3.0, vCoord2=-4.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#80300 ]', ), ), name='Set-16')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-12', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-16'], stressMag1=-36760.0, 
+    stressMag2=-45950.0, vCoord1=-4.0, vCoord2=-5.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#100c00 ]', ), ), name='Set-17')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-13', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-17'], stressMag1=-45950.0, 
+    stressMag2=-55140.0, vCoord1=-5.0, vCoord2=-6.0)
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#43000 ]', ), ), name='Set-18')
+mdb.models['Model-1'].GeostaticStress(lateralCoeff1=1.0, lateralCoeff2=None, 
+    name='Predefined Field-14', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-18'], stressMag1=-55140.0, 
+    stressMag2=-64330.0, vCoord1=-6.0, vCoord2=-7.0)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeByNumber(constraint=FINER, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#84210860 #10000 ]', ), ), number=10)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeByBias(biasMethod=SINGLE, 
+    constraint=FINER, end1Edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#0 #4aa50 ]', ), ), end2Edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#0 #80 ]', ), ), number=15, ratio=10.0)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeByNumber(constraint=FINER, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#1084210a #2 ]', ), ), number=15)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeByNumber(constraint=FINER, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#4a529491 #9 ]', ), ), number=3)
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(elemShape=QUAD, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask((
+    '[#1fffff ]', ), ), technique=STRUCTURED)
+mdb.models['Model-1'].parts['Part-1'].setElementType(elemTypes=(ElemType(
+    elemCode=CPE8RP, elemLibrary=STANDARD), ElemType(elemCode=CPE6MP, 
+    elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask((
+    '[#1fffff ]', ), ), ))
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+# Save by mohamed on 2021_11_06-01.34.18; build 2017 2016_09_27-14.54.59 126836

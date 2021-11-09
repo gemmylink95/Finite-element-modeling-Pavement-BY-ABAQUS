@@ -1,0 +1,596 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2017 replay file
+# Internal Version: 2016_09_27-14.54.59 126836
+# Run by mohamed on Sat Nov 06 22:21:51 2021
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=177.170822143555, 
+    height=131.040008544922)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=100.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.Line(point1=(-4.0, 8.0), point2=(18.0, 8.0))
+s.HorizontalConstraint(entity=g[2], addUndoState=False)
+s.Line(point1=(18.0, 8.0), point2=(18.0, 6.0))
+s.VerticalConstraint(entity=g[3], addUndoState=False)
+s.PerpendicularConstraint(entity1=g[2], entity2=g[3], addUndoState=False)
+s.Line(point1=(18.0, 6.0), point2=(-2.0, 6.0))
+s.HorizontalConstraint(entity=g[4], addUndoState=False)
+s.PerpendicularConstraint(entity1=g[3], entity2=g[4], addUndoState=False)
+s.Line(point1=(-2.0, 6.0), point2=(-2.0, -4.0))
+s.VerticalConstraint(entity=g[5], addUndoState=False)
+s.PerpendicularConstraint(entity1=g[4], entity2=g[5], addUndoState=False)
+s.Line(point1=(-2.0, -4.0), point2=(-4.0, -4.0))
+s.HorizontalConstraint(entity=g[6], addUndoState=False)
+s.PerpendicularConstraint(entity1=g[5], entity2=g[6], addUndoState=False)
+s.Line(point1=(-4.0, -4.0), point2=(-4.0, 8.0))
+s.VerticalConstraint(entity=g[7], addUndoState=False)
+s.PerpendicularConstraint(entity1=g[6], entity2=g[7], addUndoState=False)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=86.023, 
+    farPlane=102.539, width=55.5039, height=31.5223, cameraPosition=(15.7968, 
+    6.8439, 94.2809), cameraTarget=(15.7968, 6.8439, 0))
+s.ObliqueDimension(vertex1=v[0], vertex2=v[1], textPoint=(-0.262456893920898, 
+    10.9355049133301), value=100.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=58.7065, 
+    farPlane=129.855, width=239.106, height=135.795, cameraPosition=(62.0183, 
+    -11.8163, 94.2809), cameraTarget=(62.0183, -11.8163, 0))
+s.ObliqueDimension(vertex1=v[5], vertex2=v[0], textPoint=(-12.1798210144043, 
+    2.88961601257324), value=40.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=75.12, 
+    farPlane=113.442, width=113.796, height=64.6278, cameraPosition=(25.6682, 
+    0.754665, 94.2809), cameraTarget=(25.6682, 0.754665, 0))
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.78313, 
+    farPlane=4.14507, width=1.07891, height=0.586392, viewOffsetX=-0.111799, 
+    viewOffsetY=-0.0125044)
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=200.0)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=STANDALONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=178.287, 
+    farPlane=198.837, width=61.0236, height=34.6571, cameraPosition=(1.18729, 
+    40.1151, 188.562), cameraTarget=(1.18729, 40.1151, 0))
+s1.Line(point1=(-80.0, 50.0), point2=(0.0, 50.0))
+s1.HorizontalConstraint(entity=g[2], addUndoState=False)
+s1.Line(point1=(0.0, 50.0), point2=(0.0, 45.0))
+s1.VerticalConstraint(entity=g[3], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[2], entity2=g[3], addUndoState=False)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=184.389, 
+    farPlane=192.734, width=24.7807, height=14.0737, cameraPosition=(-65.8607, 
+    41.6812, 188.562), cameraTarget=(-65.8607, 41.6812, 0))
+s1.Line(point1=(0.0, 45.0), point2=(-75.0, 45.0))
+s1.HorizontalConstraint(entity=g[4], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[3], entity2=g[4], addUndoState=False)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=185.765, 
+    farPlane=191.359, width=16.6128, height=9.43491, cameraPosition=(-68.9059, 
+    25.0102, 188.562), cameraTarget=(-68.9059, 25.0102, 0))
+s1.Line(point1=(-75.0, 45.0), point2=(-75.0, 25.0))
+s1.VerticalConstraint(entity=g[5], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[4], entity2=g[5], addUndoState=False)
+s1.Line(point1=(-75.0, 25.0), point2=(-76.25, 25.0))
+s1.HorizontalConstraint(entity=g[6], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[5], entity2=g[6], addUndoState=False)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=168.538, 
+    farPlane=208.586, width=134.587, height=76.4357, cameraPosition=(-17.1091, 
+    24.1007, 188.562), cameraTarget=(-17.1091, 24.1007, 0))
+s1.undo()
+s1.undo()
+s1.undo()
+s1.undo()
+s1.undo()
+s1.Line(point1=(-80.0, 45.0), point2=(-5.0, 45.0))
+s1.HorizontalConstraint(entity=g[2], addUndoState=False)
+s1.Line(point1=(-5.0, 45.0), point2=(-5.0, 40.0))
+s1.VerticalConstraint(entity=g[3], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[2], entity2=g[3], addUndoState=False)
+s1.Line(point1=(-5.0, 40.0), point2=(-75.0, 40.0))
+s1.HorizontalConstraint(entity=g[4], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[3], entity2=g[4], addUndoState=False)
+s1.Line(point1=(-75.0, 40.0), point2=(-75.0, 20.0))
+s1.VerticalConstraint(entity=g[5], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[4], entity2=g[5], addUndoState=False)
+s1.Line(point1=(-75.0, 20.0), point2=(-80.0, 20.0))
+s1.HorizontalConstraint(entity=g[6], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[5], entity2=g[6], addUndoState=False)
+s1.Line(point1=(-80.0, 20.0), point2=(-80.0, 45.0))
+s1.VerticalConstraint(entity=g[7], addUndoState=False)
+s1.PerpendicularConstraint(entity1=g[6], entity2=g[7], addUndoState=False)
+s1.ObliqueDimension(vertex1=v[0], vertex2=v[1], textPoint=(-69.8144073486328, 
+    51.7514305114746), value=100.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=136.62, 
+    farPlane=240.504, width=349.119, height=198.275, cameraPosition=(69.2323, 
+    9.64439, 188.562), cameraTarget=(69.2323, 9.64439, 0))
+s1.ObliqueDimension(vertex1=v[5], vertex2=v[0], textPoint=(-91.8995056152344, 
+    36.9033584594727), value=40.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=172.865, 
+    farPlane=204.258, width=105.502, height=59.9177, cameraPosition=(16.7507, 
+    34.8677, 188.562), cameraTarget=(16.7507, 34.8677, 0))
+s1.ObliqueDimension(vertex1=v[1], vertex2=v[2], textPoint=(34.202808380127, 
+    42.8562660217285), value=5.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=157.049, 
+    farPlane=220.075, width=211.81, height=120.293, cameraPosition=(-0.277084, 
+    32.0037, 188.562), cameraTarget=(-0.277084, 32.0037, 0))
+s1.FilletByRadius(radius=4.0, curve1=g[4], nearPoint1=(-63.4128265380859, 
+    38.9330406188965), curve2=g[5], nearPoint2=(-75.0772018432617, 
+    31.3569717407227))
+s1.FilletByRadius(radius=9.0, curve1=g[2], nearPoint1=(-69.7078857421875, 
+    44.8460731506348), curve2=g[7], nearPoint2=(-79.3356170654297, 
+    36.9004402160645))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=172.607, 
+    farPlane=204.517, width=94.7565, height=53.815, cameraPosition=(4.73587, 
+    39.7136, 188.562), cameraTarget=(4.73587, 39.7136, 0))
+s1.CircleByCenterPerimeter(center=(10.0, 45.0), point1=(10.0, 47.5))
+s1.CoincidentConstraint(entity1=v[15], entity2=g[2], addUndoState=False)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=185.536, 
+    farPlane=191.588, width=20.34, height=11.5517, cameraPosition=(8.32651, 
+    45.0253, 188.562), cameraTarget=(8.32651, 45.0253, 0))
+s1.delete(objectList=(c[45], ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=182.733, 
+    farPlane=194.391, width=34.6178, height=19.6604, cameraPosition=(7.1708, 
+    41.6341, 188.562), cameraTarget=(7.1708, 41.6341, 0))
+s1.autoTrimCurve(curve1=g[2], point1=(9.10746383666992, 45.1826858520508))
+s1.autoTrimCurve(curve1=g[10], point1=(8.3206958770752, 46.8135070800781))
+s1.autoTrimCurve(curve1=g[13], point1=(11.0743827819824, 47.4477157592773))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=184.994, 
+    farPlane=192.13, width=21.1883, height=12.0334, cameraPosition=(7.9267, 
+    41.2215, 188.562), cameraTarget=(7.9267, 41.2215, 0))
+s1.CircleByCenterPerimeter(center=(10.0, 40.0), point1=(10.0010738372803, 
+    41.9885749816895))
+s1.CoincidentConstraint(entity1=v[22], entity2=g[4], addUndoState=False)
+s1.autoTrimCurve(curve1=g[15], point1=(9.0009298324585, 41.6558532714844))
+s1.autoTrimCurve(curve1=g[16], point1=(11.1308679580688, 41.6558532714844))
+s1.autoTrimCurve(curve1=g[4], point1=(11.0382623672485, 39.992244720459))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=181.035, 
+    farPlane=196.089, width=50.5916, height=28.7325, cameraPosition=(4.10221, 
+    36.9338, 188.562), cameraTarget=(4.10221, 36.9338, 0))
+mdb.saveAs(pathName='C:/temp/canlevermodel')
+#: The model database has been saved to "C:\temp\canlevermodel.cae".
+p = mdb.models['Model-1'].Part(name='cantlever123', dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['cantlever123']
+p.BaseSolidExtrude(sketch=s1, depth=20.0)
+s1.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['cantlever123']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+p = mdb.models['Model-1'].parts['cantlever123']
+f, e = p.faces, p.edges
+t = p.MakeSketchTransform(sketchPlane=f[9], sketchUpEdge=e[29], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(-31.75, 45.0, 
+    10.0))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=185.33, gridSpacing=4.63, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['cantlever123']
+p.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=153.965, 
+    farPlane=210.066, width=47.8111, height=27.1533, cameraPosition=(-30.9666, 
+    207.015, 10.1962), cameraTarget=(-30.9666, 45, 10.1962))
+s.CircleByCenterPerimeter(center=(0.0, 0.0), point1=(0.0, 2.315))
+s.ObliqueDimension(vertex1=v[8], vertex2=v[9], textPoint=(3.79246520996094, 
+    4.49619960784912), value=4.0)
+p = mdb.models['Model-1'].parts['cantlever123']
+f1, e1 = p.faces, p.edges
+p.CutExtrude(sketchPlane=f1[9], sketchUpEdge=e1[29], sketchPlaneSide=SIDE1, 
+    sketchOrientation=RIGHT, sketch=s, flipExtrudeDirection=OFF)
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=175.449, 
+    farPlane=303.877, width=108.677, height=59.0661, viewOffsetX=-0.139464, 
+    viewOffsetY=0.729223)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=175.002, 
+    farPlane=306.057, width=108.4, height=58.9157, cameraPosition=(142.969, 
+    103.157, 157.832), cameraUpVector=(-0.452613, 0.773907, -0.442956), 
+    cameraTarget=(-25.9657, 22.0664, 8.42144), viewOffsetX=-0.139109, 
+    viewOffsetY=0.727367)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=197.488, 
+    farPlane=280.404, width=122.329, height=66.4858, cameraPosition=(34.8157, 
+    45.1612, 239.157), cameraUpVector=(-0.415478, 0.850626, -0.322202), 
+    cameraTarget=(-26.1923, 21.9316, 8.55699), viewOffsetX=-0.156983, 
+    viewOffsetY=0.820827)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=195.295, 
+    farPlane=282.596, width=120.971, height=65.7476, cameraPosition=(34.4757, 
+    45.0336, 239.26), cameraUpVector=(-0.080865, 0.905638, -0.41627), 
+    cameraTarget=(-26.5323, 21.804, 8.65979), viewOffsetX=-0.15524, 
+    viewOffsetY=0.811713)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=196.149, 
+    farPlane=280.232, width=121.5, height=66.0351, cameraPosition=(10.2443, 
+    91.4761, 235.209), cameraUpVector=(-0.173843, 0.801701, -0.571886), 
+    cameraTarget=(-26.3231, 21.7274, 8.85582), viewOffsetX=-0.155919, 
+    viewOffsetY=0.815263)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].Material(name='steel')
+mdb.models['Model-1'].materials['steel'].Elastic(table=((210000.0, 0.3), ))
+mdb.models['Model-1'].HomogeneousSolidSection(name='Section-1', 
+    material='steel', thickness=None)
+p = mdb.models['Model-1'].parts['cantlever123']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['cantlever123']
+p.SectionAssignment(region=region, sectionName='Section-1', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.DatumCsysByDefault(CARTESIAN)
+p = mdb.models['Model-1'].parts['cantlever123']
+a.Instance(name='cantlever123-1', part=p, dependent=ON)
+a = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['cantlever123']
+a.Instance(name='cantlever123-2', part=p, dependent=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=162.208, 
+    farPlane=314.091, width=110.585, height=60.1031, cameraPosition=(-244.719, 
+    110.332, 63.8269), cameraUpVector=(0.347488, 0.447586, -0.823965))
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['cantlever123-2'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#100 ]', ), )
+region = a.Set(faces=faces1, name='Set-1')
+mdb.models['Model-1'].DisplacementBC(name='BC-1', createStepName='Step-1', 
+    region=region, u1=0.0, u2=0.0, u3=0.0, ur1=0.0, ur2=0.0, ur3=0.0, 
+    amplitude=UNSET, fixed=OFF, distributionType=UNIFORM, fieldName='', 
+    localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=155.885, 
+    farPlane=320.414, width=177.316, height=96.3718, viewOffsetX=21.797, 
+    viewOffsetY=-9.0176)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=178.163, 
+    farPlane=329.286, width=202.657, height=110.145, cameraPosition=(-196.631, 
+    130.537, 169.174), cameraUpVector=(0.386517, 0.758773, -0.524279), 
+    cameraTarget=(-35.1122, 44.4436, 9.0227), viewOffsetX=24.912, 
+    viewOffsetY=-10.3063)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=226.068, 
+    farPlane=326.803, width=257.148, height=139.761, cameraPosition=(-38.8928, 
+    137.73, 261.641), cameraUpVector=(-0.0814276, 0.7434, -0.663872), 
+    cameraTarget=(-41.3729, 45.542, 36.5985), viewOffsetX=31.6104, 
+    viewOffsetY=-13.0775)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=202.515, 
+    farPlane=342.207, width=230.357, height=125.2, cameraPosition=(-60.9614, 
+    250.711, 158.322), cameraUpVector=(0.421878, 0.319721, -0.848409), 
+    cameraTarget=(-34.0417, 63.3909, 5.56307), viewOffsetX=28.317, 
+    viewOffsetY=-11.715)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=231.132, 
+    farPlane=313.589, width=71.9886, height=39.126, viewOffsetX=38.6602, 
+    viewOffsetY=-2.96053)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=231.821, 
+    farPlane=312.9, width=72.2032, height=39.2426, cameraPosition=(-61.4512, 
+    250.082, 159.006), cameraUpVector=(0.402137, 0.323501, -0.856524), 
+    cameraTarget=(-34.5315, 62.7624, 6.24751), viewOffsetX=38.7755, 
+    viewOffsetY=-2.96936)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['cantlever123-2'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#800 ]', ), )
+region = a.Surface(side1Faces=side1Faces1, name='Surf-1')
+mdb.models['Model-1'].Pressure(name='Load-50m', createStepName='Step-1', 
+    region=region, distributionType=UNIFORM, field='', magnitude=0.06, 
+    amplitude=UNSET)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=234.11, 
+    farPlane=310.61, width=61.0595, height=33.1859, viewOffsetX=39.5524, 
+    viewOffsetY=-1.63005)
+del mdb.models['Model-1'].loads['Load-50m']
+#: Warning: Cannot continue yet--complete the step or cancel the procedure.
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['cantlever123-2'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#800 ]', ), )
+region = a.Surface(side1Faces=side1Faces1, name='Surf-2')
+mdb.models['Model-1'].Pressure(name='Load-50', createStepName='Step-1', 
+    region=region, distributionType=UNIFORM, field='', magnitude=10.0, 
+    amplitude=UNSET)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=214.295, 
+    farPlane=330.425, width=192.981, height=104.885, viewOffsetX=53.3007, 
+    viewOffsetY=-4.25116)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=212.902, 
+    farPlane=331.818, width=191.726, height=104.204, cameraPosition=(-67.9479, 
+    221.846, 192.485), cameraUpVector=(-0.206906, 0.297541, -0.932019), 
+    cameraTarget=(-41.0282, 34.5265, 39.7268), viewOffsetX=52.9542, 
+    viewOffsetY=-4.22353)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=185.672, 
+    farPlane=327.87, width=167.204, height=90.8763, cameraPosition=(-133.153, 
+    219.549, 139.083), cameraUpVector=(0.230137, 0.329143, -0.915807), 
+    cameraTarget=(-44.013, 35.8604, 6.94431), viewOffsetX=46.1814, 
+    viewOffsetY=-3.68334)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=189.553, 
+    farPlane=323.989, width=170.699, height=92.7756, cameraPosition=(-134.371, 
+    211.089, 150.021), cameraUpVector=(0.0400974, 0.27014, -0.961986), 
+    cameraTarget=(-45.2308, 27.4007, 17.8827), viewOffsetX=47.1466, 
+    viewOffsetY=-3.76032)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=170.351, 
+    farPlane=343.189, width=302.999, height=164.681, viewOffsetX=68.7845, 
+    viewOffsetY=-4.74968)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=106.586, 
+    farPlane=311.447, width=189.581, height=103.038, cameraPosition=(-210.307, 
+    116.026, 65.0062), cameraUpVector=(0.261408, 0.331314, -0.906585), 
+    cameraTarget=(-17.6253, -9.19956, -14.6206), viewOffsetX=43.0373, 
+    viewOffsetY=-2.97179)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=139.988, 
+    farPlane=278.046, width=86.9679, height=47.2672, viewOffsetX=21.4, 
+    viewOffsetY=3.6591)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.692, 
+    farPlane=272.197, width=94.239, height=51.2191, cameraPosition=(91.682, 
+    86.0491, 173.429), cameraUpVector=(-0.44177, 0.806167, -0.393617), 
+    cameraTarget=(-69.3265, 16.1788, 5.07674), viewOffsetX=23.1892, 
+    viewOffsetY=3.96502)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=166.933, 
+    farPlane=245.99, width=103.708, height=56.3653, cameraPosition=(4.87936, 
+    26.3577, 215.096), cameraUpVector=(-0.270315, 0.917142, -0.292883), 
+    cameraTarget=(-65.3039, 19.7329, -17.6669), viewOffsetX=25.5191, 
+    viewOffsetY=4.3634)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=165.434, 
+    farPlane=247.489, width=102.777, height=55.8593, cameraPosition=(3.02008, 
+    34.6595, 215.42), cameraUpVector=(-0.0307427, 0.930306, -0.365494), 
+    cameraTarget=(-67.1632, 28.0347, -17.3426), viewOffsetX=25.29, 
+    viewOffsetY=4.32423)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=157.419, 
+    farPlane=255.503, width=163.079, height=88.634, viewOffsetX=27.8881, 
+    viewOffsetY=-0.242022)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.588, 
+    farPlane=263.377, width=157.038, height=85.3507, cameraPosition=(-4.07808, 
+    106.796, 199.978), cameraUpVector=(-0.0688761, 0.745357, -0.663099), 
+    cameraTarget=(-66.4147, 16.651, -17.1306), viewOffsetX=26.8551, 
+    viewOffsetY=-0.233056)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['cantlever123']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['cantlever123']
+p.seedPart(size=4.4, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['cantlever123']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['cantlever123']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['cantlever123']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=200.854, 
+    farPlane=275.525, width=85.8299, height=46.8124, viewOffsetX=-2.25813, 
+    viewOffsetY=10.1072)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=202.819, 
+    farPlane=275.593, width=86.6695, height=47.2703, cameraPosition=(0.938562, 
+    118.141, 228.202), cameraUpVector=(-0.190603, 0.724637, -0.662248), 
+    cameraTarget=(-25.8758, 22.1452, 10.2487), viewOffsetX=-2.28022, 
+    viewOffsetY=10.2061)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=202.741, 
+    farPlane=275.671, width=86.6361, height=47.2521, cameraPosition=(0.302642, 
+    117.952, 228.364), cameraUpVector=(-0.139215, 0.728814, -0.67041), 
+    cameraTarget=(-26.5117, 21.956, 10.4103), viewOffsetX=-2.27934, 
+    viewOffsetY=10.2022)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=186.222, 
+    farPlane=292.676, width=79.5771, height=43.4021, cameraPosition=(86.6176, 
+    116.599, 198.063), cameraUpVector=(-0.270689, 0.729245, -0.628434), 
+    cameraTarget=(-26.8465, 21.5812, 9.55404), viewOffsetX=-2.09362, 
+    viewOffsetY=9.37094)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=182.974, 
+    farPlane=295.925, width=113.339, height=61.8161, viewOffsetX=1.24205, 
+    viewOffsetY=9.43827)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=174.155, 
+    farPlane=317.954, width=107.876, height=58.8367, cameraPosition=(197.645, 
+    78.3345, -66.8488), cameraUpVector=(-0.571327, 0.82068, 0.00833897), 
+    cameraTarget=(-23.1004, 21.2526, 6.98294), viewOffsetX=1.18218, 
+    viewOffsetY=8.98337)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=200.835, 
+    farPlane=287.867, width=124.402, height=67.8504, cameraPosition=(12.6337, 
+    111.491, 234.649), cameraUpVector=(0.0404458, 0.735323, -0.676508), 
+    cameraTarget=(-34.7914, 22.658, 17.1688), viewOffsetX=1.36329, 
+    viewOffsetY=10.3596)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=202.575, 
+    farPlane=282.446, width=125.48, height=68.4381, cameraPosition=(1.96258, 
+    49.7769, 249.255), cameraUpVector=(0.148735, 0.869341, -0.471301), 
+    cameraTarget=(-36.2315, 20.8967, 14.4248), viewOffsetX=1.3751, 
+    viewOffsetY=10.4493)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=195.689, 
+    farPlane=289.332, width=177.148, height=96.618, viewOffsetX=-1.06339, 
+    viewOffsetY=9.15799)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.save()
+#: The model database has been saved to "C:\temp\canlevermodel.cae".
+session.viewports['Viewport: 1'].view.setValues(nearPlane=154.798, 
+    farPlane=260.167, width=150.742, height=85.6107, viewOffsetX=25.8357, 
+    viewOffsetY=-1.5013)
+mdb.Job(name='cantelverjob', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['cantelverjob'].submit(consistencyChecking=OFF)
+#: The job input file "cantelverjob.inp" has been submitted for analysis.
+#: Job cantelverjob: Analysis Input File Processor completed successfully.
+#: Job cantelverjob: Abaqus/Standard completed successfully.
+#: Job cantelverjob completed successfully. 
+o3 = session.openOdb(name='C:/temp/cantelverjob.odb')
+#: Model: C:/temp/cantelverjob.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     2
+#: Number of Meshes:             2
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=177.797, 
+    farPlane=301.528, width=104.86, height=56.9915, viewOffsetX=-1.92478, 
+    viewOffsetY=0.16634)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=191.275, 
+    farPlane=282.11, width=112.809, height=61.3117, cameraPosition=(-67.5906, 
+    258.508, 20.1992), cameraUpVector=(0.148327, -0.274451, -0.950092), 
+    cameraTarget=(-25.1878, 22.8129, 10.8198), viewOffsetX=-2.07069, 
+    viewOffsetY=0.178949)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=191.194, 
+    farPlane=284.17, width=112.761, height=61.286, cameraPosition=(37.9224, 
+    97.8583, 225.843), cameraUpVector=(-0.012892, 0.779747, -0.625961), 
+    cameraTarget=(-26.5607, 23.7539, 7.23679), viewOffsetX=-2.06982, 
+    viewOffsetY=0.178873)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=199.698, 
+    farPlane=275.35, width=117.776, height=64.0118, cameraPosition=(18.2048, 
+    35.3526, 242.388), cameraUpVector=(-0.129846, 0.925317, -0.356271), 
+    cameraTarget=(-26.3093, 24.861, 7.12899), viewOffsetX=-2.16188, 
+    viewOffsetY=0.186829)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=198.904, 
+    farPlane=276.144, width=117.308, height=63.7574, cameraPosition=(18.1997, 
+    35.2194, 242.395), cameraUpVector=(-0.0819931, 0.927228, -0.365411), 
+    cameraTarget=(-26.3144, 24.7278, 7.13589), viewOffsetX=-2.15329, 
+    viewOffsetY=0.186086)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=197.704, 
+    farPlane=277.261, width=131.961, height=71.7211, viewOffsetX=-0.87818, 
+    viewOffsetY=-1.41636)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=175.422, 
+    farPlane=303.056, width=117.088, height=63.6378, cameraPosition=(134.274, 
+    2.92848, 182.789), cameraUpVector=(0.191663, 0.82622, -0.529741), 
+    cameraTarget=(-26.9999, 24.1843, 6.78542), viewOffsetX=-0.779205, 
+    viewOffsetY=-1.25673)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=183.954, 
+    farPlane=298.636, width=122.783, height=66.7329, cameraPosition=(64.7981, 
+    -195.98, 31.5735), cameraUpVector=(0.466517, 0.474692, -0.746344), 
+    cameraTarget=(-27.8973, 23.5742, 6.23444), viewOffsetX=-0.817102, 
+    viewOffsetY=-1.31785)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=188.787, 
+    farPlane=293.804, width=81.7139, height=44.4117, viewOffsetX=3.57543, 
+    viewOffsetY=-7.40004)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    ORIENT_ON_DEF, ))
+#: Warning: Material orientation information is not available in the current frame for any elements in the current display group.  Please make sure the primary variable is element-based AND orientations had been defined in the pertinent solid/shell sections.
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=175.376, 
+    farPlane=307.215, width=180.955, height=98.3492, viewOffsetX=6.90306, 
+    viewOffsetY=-18.3468)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.198, 
+    farPlane=310.662, width=156.008, height=84.7904, cameraPosition=(143.465, 
+    -24.8038, 158.348), cameraUpVector=(-0.129281, 0.989029, 0.0714702), 
+    cameraTarget=(-51.1037, 39.5182, 34.073), viewOffsetX=5.95138, 
+    viewOffsetY=-15.8174)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=146.6, 
+    farPlane=315.26, width=219.264, height=119.171, viewOffsetX=5.82984, 
+    viewOffsetY=-19.6966)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=167.234, 
+    farPlane=285.061, width=250.126, height=135.944, cameraPosition=(-5.49712, 
+    -78.8882, -189.632), cameraUpVector=(0.0478437, 0.983827, -0.172613), 
+    cameraTarget=(-32.5688, 39.846, 16.7851), viewOffsetX=6.65039, 
+    viewOffsetY=-22.4689)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=154.428, 
+    farPlane=280.957, width=230.973, height=125.534, cameraPosition=(17.8821, 
+    2.2757, -201.452), cameraUpVector=(0.000377875, 0.981497, 0.191479), 
+    cameraTarget=(-34.5428, 38.6215, 29.5659), viewOffsetX=6.14113, 
+    viewOffsetY=-20.7483)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=152.598, 
+    farPlane=282.787, width=274.79, height=149.349, viewOffsetX=7.85888, 
+    viewOffsetY=-25.7212)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=149.13, 
+    farPlane=339.218, width=268.545, height=145.955, cameraPosition=(-224.918, 
+    -115.051, -42.1384), cameraUpVector=(-0.407817, 0.89632, 0.174059), 
+    cameraTarget=(-51.9773, 42.8962, 8.68172), viewOffsetX=7.68028, 
+    viewOffsetY=-25.1367)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=167.099, 
+    farPlane=334.882, width=300.903, height=163.542, cameraPosition=(-156.086, 
+    -66.5197, 209.524), cameraUpVector=(0.0509581, 0.974225, 0.219748), 
+    cameraTarget=(-39.3656, 48.7831, 34.8236), viewOffsetX=8.60571, 
+    viewOffsetY=-28.1655)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=174.458, 
+    farPlane=328.796, width=314.154, height=170.744, cameraPosition=(-99.6921, 
+    -8.29603, 252.07), cameraUpVector=(0.221233, 0.975178, -0.00914211), 
+    cameraTarget=(-27.8375, 55.2659, 32.4447), viewOffsetX=8.98468, 
+    viewOffsetY=-29.4058)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=209.372, 
+    farPlane=293.88, width=75.7653, height=41.1786, viewOffsetX=-29.6042, 
+    viewOffsetY=-22.408)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=207.08, 
+    farPlane=284.841, width=74.9356, height=40.7276, cameraPosition=(-73.4935, 
+    -44.8807, 244.704), cameraUpVector=(0.103506, 0.988134, 0.113481), 
+    cameraTarget=(-27.615, 55.5884, 32.0078), viewOffsetX=-29.28, 
+    viewOffsetY=-22.1626)
+#: 
+#: Node: CANTLEVER123-2.59
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -7.10000e+001,  4.00000e+001,  1.60000e+001,      -      
+#: Scale:                             1.39414e+000,  1.39414e+000,  1.39414e+000,      -      
+#: Deformed coordinates (unscaled):  -7.09822e+001,  3.99000e+001,  1.60044e+001,      -      
+#: Deformed coordinates (scaled):    -7.09752e+001,  3.98606e+001,  1.60062e+001,      -      
+#: Displacement (unscaled):           1.78240e-002, -9.99869e-002,  4.41188e-003,  1.01659e-001
+#: 
+#: Node: CANTLEVER123-2.3443
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -7.38284e+001,  3.88284e+001,  1.00000e+001,      -      
+#: Scale:                             1.39414e+000,  1.39414e+000,  1.39414e+000,      -      
+#: Deformed coordinates (unscaled):  -7.38124e+001,  3.87835e+001,  9.99981e+000,      -      
+#: Deformed coordinates (scaled):    -7.38061e+001,  3.87657e+001,  9.99974e+000,      -      
+#: Displacement (unscaled):           1.60511e-002, -4.49723e-002, -1.88146e-004,  4.77512e-002
+#: 
+#: Node: CANTLEVER123-2.1220
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -7.25307e+001,  3.96955e+001,  1.60000e+001,      -      
+#: Scale:                             1.39414e+000,  1.39414e+000,  1.39414e+000,      -      
+#: Deformed coordinates (unscaled):  -7.25098e+001,  3.96280e+001,  1.60036e+001,      -      
+#: Deformed coordinates (scaled):    -7.25015e+001,  3.96014e+001,  1.60050e+001,      -      
+#: Displacement (unscaled):           2.09716e-002, -6.75308e-002,  3.61049e-003,  7.08044e-002
+#: 
+#: Node: CANTLEVER123-2.61
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -7.10000e+001,  4.00000e+001,  8.00000e+000,      -      
+#: Scale:                             1.39414e+000,  1.39414e+000,  1.39414e+000,      -      
+#: Deformed coordinates (unscaled):  -7.09821e+001,  3.98958e+001,  7.99837e+000,      -      
+#: Deformed coordinates (scaled):    -7.09750e+001,  3.98548e+001,  7.99773e+000,      -      
+#: Displacement (unscaled):           1.79479e-002, -1.04174e-001, -1.62494e-003,  1.05721e-001
+session.viewports['Viewport: 1'].view.setValues(nearPlane=206.063, 
+    farPlane=285.858, width=77.5475, height=42.1472, viewOffsetX=2.27069, 
+    viewOffsetY=-18.3922)
+mdb.save()
+#: The model database has been saved to "C:\temp\canlevermodel.cae".

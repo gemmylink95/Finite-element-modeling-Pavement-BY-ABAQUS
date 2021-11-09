@@ -1,0 +1,699 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2017 replay file
+# Internal Version: 2016_09_27-14.54.59 126836
+# Run by mohamed on Fri Nov 05 21:15:16 2021
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=177.170822143555, 
+    height=131.040008544922)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=100.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=84.5267, 
+    farPlane=104.035, width=65.5611, height=37.234, cameraPosition=(1.31351, 
+    0.255662, 94.2809), cameraTarget=(1.31351, 0.255662, 0))
+s.rectangle(point1=(0.0, 0.0), point2=(30.0, 7.0))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=80.99, 
+    farPlane=107.572, width=89.3319, height=50.7342, cameraPosition=(4.04584, 
+    -2.86892, 94.2809), cameraTarget=(4.04584, -2.86892, 0))
+s.ObliqueDimension(vertex1=v[1], vertex2=v[2], textPoint=(12.4792728424072, 
+    10.3406763076782), value=30.0)
+s.ObliqueDimension(vertex1=v[0], vertex2=v[1], textPoint=(-6.02742910385132, 
+    3.95019245147705), value=7.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=80.99, 
+    farPlane=107.572, width=78.9337, height=44.8287, cameraPosition=(1.32812, 
+    -2.12961, 94.2809), cameraTarget=(1.32812, -2.12961, 0))
+p = mdb.models['Model-1'].Part(name='Part-1', dimensionality=TWO_D_PLANAR, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['Part-1']
+p.BaseShell(sketch=s)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.9801, 
+    farPlane=66.2433, width=30.9915, height=17.601, viewOffsetX=0.303956, 
+    viewOffsetY=-0.093277)
+p = mdb.models['Model-1'].parts['Part-1']
+f, e, d1 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 3.5, 0.0))
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s1, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=52.8392, 
+    farPlane=70.3842, width=52.0995, height=29.5888, cameraPosition=(17.9891, 
+    1.6245, 61.6117), cameraTarget=(17.9891, 1.6245, 0))
+s1.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+p = mdb.models['Model-1'].parts['Part-1']
+f1, e1, d2 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f1[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 3.5, 0.0))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+s.undo()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=53.6589, 
+    farPlane=69.5645, width=53.4532, height=30.3576, cameraPosition=(19.8253, 
+    2.66216, 61.6117), cameraTarget=(19.8253, 2.66216, 0))
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+p = mdb.models['Model-1'].parts['Part-1']
+f, e, d1 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 3.5, 0.0))
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s1, filter=COPLANAR_EDGES)
+s1.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+p = mdb.models['Model-1'].parts['Part-1']
+f1, e1, d2 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f1[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 3.5, 0.0))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+s.offset(distance=1.0, objectList=(g[4], ), side=LEFT)
+s.offset(distance=1.0, objectList=(g[6], ), side=RIGHT)
+s.undo()
+s.offset(distance=1.0, objectList=(g[6], ), side=LEFT)
+s.undo()
+s.offset(distance=1.0, objectList=(g[6], ), side=RIGHT)
+s.undo()
+s.offset(distance=1.0, objectList=(g[6], ), side=LEFT)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.3077, 
+    farPlane=66.9157, width=35.6496, height=20.2465, cameraPosition=(16.3848, 
+    3.38836, 61.6117), cameraTarget=(16.3848, 3.38836, 0))
+s.undo()
+s.offset(distance=1.0, objectList=(g[6], ), side=LEFT)
+s.offset(distance=1.0, objectList=(g[7], ), side=LEFT)
+s.offset(distance=1.0, objectList=(g[8], ), side=LEFT)
+s.offset(distance=1.0, objectList=(g[9], ), side=LEFT)
+s.undo()
+s.offset(distance=1.0, objectList=(g[9], ), side=LEFT)
+s.offset(distance=1.0, objectList=(g[10], ), side=LEFT)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=53.7967, 
+    farPlane=69.4266, width=52.5267, height=29.8314, cameraPosition=(20.9629, 
+    1.94651, 61.6117), cameraTarget=(20.9629, 1.94651, 0))
+s.ObliqueDimension(vertex1=v[15], vertex2=v[13], textPoint=(-18.2801380157471, 
+    -1.25563383102417), value=1.0)
+s.VerticalDimension(vertex1=v[7], vertex2=v[5], textPoint=(-18.6933708190918, 
+    2.41028738021851), value=1.0)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+pickedFaces = f.getSequenceFromMask(mask=('[#1 ]', ), )
+e, d1 = p.edges, p.datums
+p.PartitionFaceBySketch(faces=pickedFaces, sketch=s)
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+p = mdb.models['Model-1'].parts['Part-1']
+f, e1, d2 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 6.5, 0.0))
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s1, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=51.5581, 
+    farPlane=68.5086, width=56.9648, height=32.352, cameraPosition=(18.0355, 
+    -2.72918, 60.0333), cameraTarget=(18.0355, -2.72918, 0))
+s1.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.4184, 
+    farPlane=66.805, width=30.686, height=17.4275, viewOffsetX=0.30096, 
+    viewOffsetY=-0.0923576)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].Material(name='sand')
+mdb.models['Model-1'].materials['sand'].Density(table=((1900.0, ), ))
+mdb.models['Model-1'].materials['sand'].Elastic(table=((13780.0, 0.3), ))
+mdb.models['Model-1'].materials['sand'].Permeability(specificWeight=9810.0, 
+    inertialDragCoefficient=0.142887, table=((6.0, 0.8), ))
+mdb.models['Model-1'].Material(name='Claylayer1')
+mdb.models['Model-1'].materials['Claylayer1'].Density(table=((1900.0, ), ))
+mdb.models['Model-1'].materials['Claylayer1'].PorousElastic(table=((0.01, 0.28, 
+    0.0), ))
+mdb.models['Model-1'].materials['Claylayer1'].ClayPlasticity(intercept=None, 
+    table=((0.1174, 1.5, 18000.0, 1.0, 1.0), ))
+mdb.models['Model-1'].materials['Claylayer1'].Permeability(
+    specificWeight=9810.0, inertialDragCoefficient=0.142887, table=((6e-12, 
+    1.5), ))
+mdb.models['Model-1'].Material(name='Claylayer2', 
+    objectToCopy=mdb.models['Model-1'].materials['Claylayer1'])
+mdb.models['Model-1'].materials['Claylayer2'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 27500.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer3', 
+    objectToCopy=mdb.models['Model-1'].materials['Claylayer2'])
+mdb.models['Model-1'].materials['Claylayer3'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 36600.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer4', 
+    objectToCopy=mdb.models['Model-1'].materials['Claylayer3'])
+mdb.models['Model-1'].materials['Claylayer4'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 46500.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer5', 
+    objectToCopy=mdb.models['Model-1'].materials['Claylayer4'])
+mdb.models['Model-1'].materials['Claylayer5'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 55140.0, 1.0, 1.0), ))
+mdb.models['Model-1'].Material(name='Claylayer6', 
+    objectToCopy=mdb.models['Model-1'].materials['Claylayer5'])
+mdb.models['Model-1'].materials['Claylayer6'].clayPlasticity.setValues(
+    intercept=None, table=((0.1174, 1.5, 64300.0, 1.0, 1.0), ))
+mdb.models['Model-1'].HomogeneousSolidSection(name='sand', material='sand', 
+    thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(name='clayclayer-1', 
+    material='Claylayer1', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(name='claylayer2', 
+    material='Claylayer2', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(name='claylayer-3', 
+    material='Claylayer3', thickness=None)
+mdb.models['Model-1'].sections.changeKey(fromName='claylayer2', 
+    toName='claylayer-2')
+mdb.models['Model-1'].HomogeneousSolidSection(name='claylayer-4', 
+    material='Claylayer4', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(name='claylayer-5', 
+    material='Claylayer5', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(name='claylayer-6', 
+    material='Claylayer6', thickness=None)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(faces=faces, name='Set-1')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='sand', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#2 ]', ), )
+region = p.Set(faces=faces, name='Set-2')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='clayclayer-1', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#4 ]', ), )
+region = p.Set(faces=faces, name='Set-3')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='claylayer-2', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#8 ]', ), )
+region = p.Set(faces=faces, name='Set-4')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='claylayer-3', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#20 ]', ), )
+region = p.Set(faces=faces, name='Set-5')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='claylayer-4', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#40 ]', ), )
+region = p.Set(faces=faces, name='Set-6')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='claylayer-5', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#10 ]', ), )
+region = p.Set(faces=faces, name='Set-7')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='claylayer-6', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Material']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.DatumCsysByDefault(CARTESIAN)
+p = mdb.models['Model-1'].parts['Part-1']
+a.Instance(name='Part-1-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.2545, 
+    farPlane=66.9689, width=35.8185, height=20.3423, viewOffsetX=-14.7932, 
+    viewOffsetY=-4.6061)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=54.9129, 
+    farPlane=68.3104, width=40.0579, height=22.75, viewOffsetX=1.04323, 
+    viewOffsetY=-1.44705)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Part-1-1', ), vector=(-15.0, -7.0, 0.0))
+#: The instance Part-1-1 was translated by -15., -7., 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=52.0927, 
+    farPlane=71.1306, width=63.3665, height=35.9877, viewOffsetX=0.634883, 
+    viewOffsetY=-2.99923)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.saveAs(pathName='C:/temp/resultmodelsoillayer')
+#: The model database has been saved to "C:\temp\resultmodelsoillayer.cae".
+mdb.models['Model-1'].GeostaticStep(name='ownwieghtsoilM', previous='Initial', 
+    matrixSolver=DIRECT, matrixStorage=UNSYMMETRIC, nlgeom=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    step='ownwieghtsoilM')
+mdb.models['Model-1'].SoilsStep(name='striplaoadingM', 
+    previous='ownwieghtsoilM', timePeriod=1e-05, maxNumInc=1, 
+    timeIncrementationMethod=FIXED, initialInc=1e-05, end=None, utol=None, 
+    cetol=None, matrixSolver=DIRECT, matrixStorage=UNSYMMETRIC)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    step='striplaoadingM')
+mdb.models['Model-1'].SoilsStep(name='consolditonM', previous='striplaoadingM', 
+    timePeriod=1000000000000.0, maxNumInc=100000, initialInc=0.005, 
+    minInc=1e-08, maxInc=100000000000.0, end=None, utol=100000.0, cetol=None, 
+    matrixSolver=DIRECT, matrixStorage=UNSYMMETRIC)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='consolditonM')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=51.0466, 
+    farPlane=72.1768, width=70.2738, height=39.9106, viewOffsetX=2.78866, 
+    viewOffsetY=-4.73372)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.0222, 
+    farPlane=67.2012, width=37.157, height=21.1025, viewOffsetX=-9.85066, 
+    viewOffsetY=-4.15035)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#7f ]', ), )
+region = a.Set(faces=faces1, name='Set-1')
+mdb.models['Model-1'].BodyForce(name='body-forec', 
+    createStepName='consolditonM', region=region, comp2=-9190.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=55.388, 
+    farPlane=67.8354, width=41.5758, height=23.6121, viewOffsetX=-10.1622, 
+    viewOffsetY=-3.32021)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Part geometry']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+p = mdb.models['Model-1'].parts['Part-1']
+f1, e, d1 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f1[0], sketchPlaneSide=SIDE1, origin=(
+    15.0, 6.5, 0.0))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=61.61, gridSpacing=1.54, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=54.7293, 
+    farPlane=65.3373, width=38.0803, height=21.6269, cameraPosition=(16.5588, 
+    7.83469, 60.0333), cameraTarget=(16.5588, 7.83469, 0))
+s.Line(point1=(-7.7, 3.465), point2=(-7.7, -9.24))
+s.VerticalConstraint(entity=g[30], addUndoState=False)
+s.Line(point1=(7.7, 4.235), point2=(7.7, -8.47))
+s.VerticalConstraint(entity=g[31], addUndoState=False)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+pickedFaces = f.getSequenceFromMask(mask=('[#7f ]', ), )
+e1, d2 = p.edges, p.datums
+p.PartitionFaceBySketch(faces=pickedFaces, sketch=s)
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Part']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Section']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Part geometry']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Element type']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Part geometry']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=54.2919, 
+    farPlane=68.9315, width=48.8403, height=27.7378, viewOffsetX=4.74701, 
+    viewOffsetY=-2.77592)
+p = mdb.models['Model-1'].parts['Part-1']
+f, e, d1 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f[0], sketchPlaneSide=SIDE1, origin=(
+    26.35, 6.5, 0.0))
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=60.03, gridSpacing=1.5, transform=t)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s1, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=40.4661, 
+    farPlane=52.6528, width=36.188, height=20.5522, cameraPosition=(11.4664, 
+    5.56209, 46.5594), cameraTarget=(11.4664, 5.56209, 0))
+s1.ObliqueDimension(vertex1=v[4], vertex2=v[26], textPoint=(-19.628528213501, 
+    3.43456268310547), value=13.5)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=41.4777, 
+    farPlane=51.6411, width=34.1559, height=19.3981, cameraPosition=(11.1893, 
+    5.51156, 46.5594), cameraTarget=(11.1893, 5.51156, 0))
+s1.ObliqueDimension(vertex1=v[0], vertex2=v[4], textPoint=(-17.3103786468506, 
+    3.04911136627197), value=3.0)
+s1.undo()
+s1.undo()
+s1.HorizontalDimension(vertex1=v[26], vertex2=v[4], textPoint=(
+    -19.1913400650024, 1.94660758972168), value=13.5)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=37.5026, 
+    farPlane=55.6163, width=60.8738, height=34.572, cameraPosition=(18.6395, 
+    11.0707, 46.5594), cameraTarget=(18.6395, 11.0707, 0))
+s1.undo()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=39.0062, 
+    farPlane=54.1127, width=44.8583, height=25.4763, cameraPosition=(14.0756, 
+    9.27528, 46.5594), cameraTarget=(14.0756, 9.27528, 0))
+s1.undo()
+s1.undo()
+#* Nothing to undo.
+s1.undo()
+#* Nothing to undo.
+s1.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=56.4125, 
+    farPlane=66.8108, width=30.9344, height=17.6302, viewOffsetX=-3.04515, 
+    viewOffsetY=0.211895)
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].view.setValues(width=2.73681, height=1.55431, 
+    viewOffsetX=0.257878, viewOffsetY=-0.0920065)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p1 = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=52.0325, 
+    farPlane=71.1908, width=63.7791, height=36.222, viewOffsetX=1.19385, 
+    viewOffsetY=-4.48091)
+p = mdb.models['Model-1'].parts['Part-1']
+f1, e1, d2 = p.faces, p.edges, p.datums
+t = p.MakeSketchTransform(sketchPlane=f1[0], sketchPlaneSide=SIDE1, origin=(
+    26.35, 6.5, 0.0))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=60.03, gridSpacing=1.5, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+p = mdb.models['Model-1'].parts['Part-1']
+p.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=34.4069, 
+    farPlane=65.4892, width=92.298, height=52.4188, cameraPosition=(33.944, 
+    3.3617, 49.9481), cameraTarget=(33.944, 3.3617, 0))
+s.HorizontalDimension(vertex1=v[26], vertex2=v[4], textPoint=(
+    -19.1111026763916, 2.8604679107666), value=13.0)
+s.undo()
+s.undo()
+s.undo()
+#* Nothing to undo.
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=55.1346, 
+    farPlane=68.0888, width=38.7238, height=21.9924, viewOffsetX=-2.10626, 
+    viewOffsetY=-0.336919)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    step='striplaoadingM')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['Part-1-1'].edges
+side1Edges1 = s1.getSequenceFromMask(mask=('[#40 ]', ), )
+region = a.Surface(side1Edges=side1Edges1, name='Surf-1')
+mdb.models['Model-1'].Pressure(name='stripload100', 
+    createStepName='striplaoadingM', region=region, distributionType=UNIFORM, 
+    field='', magnitude=100000.0, amplitude=UNSET)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+a = mdb.models['Model-1'].rootAssembly
+e1 = a.instances['Part-1-1'].edges
+edges1 = e1.getSequenceFromMask(mask=('[#0 #10042 ]', ), )
+region = a.Set(edges=edges1, name='Set-2')
+mdb.models['Model-1'].DisplacementBC(name='BC-1', createStepName='Initial', 
+    region=region, u1=SET, u2=SET, ur3=UNSET, amplitude=UNSET, 
+    distributionType=UNIFORM, fieldName='', localCsys=None)
+a = mdb.models['Model-1'].rootAssembly
+e1 = a.instances['Part-1-1'].edges
+edges1 = e1.getSequenceFromMask(mask=('[#21084204 #a5524 ]', ), )
+region = a.Set(edges=edges1, name='Set-3')
+mdb.models['Model-1'].DisplacementBC(name='BC-2', createStepName='Initial', 
+    region=region, u1=SET, u2=UNSET, ur3=UNSET, amplitude=UNSET, 
+    distributionType=UNIFORM, fieldName='', localCsys=None)
+mdb.save()
+#: The model database has been saved to "C:\temp\resultmodelsoillayer.cae".
+mdb.save()
+#: The model database has been saved to "C:\temp\resultmodelsoillayer.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='consolditonM')
+mdb.models['Model-1'].TabularAmplitude(name='Amp-1', timeSpan=TOTAL, 
+    smooth=SOLVER_DEFAULT, data=((0.0, 0.0), (1.0, 0.0), (1.01, 1.0), (1e+20, 
+    1.0)))
+a = mdb.models['Model-1'].rootAssembly
+e1 = a.instances['Part-1-1'].edges
+edges1 = e1.getSequenceFromMask(mask=('[#48 #100c2 ]', ), )
+region = a.Set(edges=edges1, name='Set-4')
+mdb.models['Model-1'].PorePressureBC(name='BC-3', 
+    createStepName='consolditonM', region=region, fixed=OFF, 
+    distributionType=UNIFORM, fieldName='', magnitude=0.0, amplitude='Amp-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#4003 ]', ), )
+region = a.Set(faces=faces1, name='Set-5')
+mdb.models['Model-1'].VoidsRatio(name='void-rato-sandM', region=region, 
+    voidsRatio1=1.5, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#800c ]', ), )
+region = a.Set(faces=faces1, name='Set-6')
+mdb.models['Model-1'].VoidsRatio(name='void-ratio-clay1M', region=region, 
+    voidsRatio1=1.42, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#10030 ]', ), )
+region = a.Set(faces=faces1, name='Set-7')
+mdb.models['Model-1'].VoidsRatio(name='void-ratioclay3M', region=region, 
+    voidsRatio1=1.37, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+mdb.models['Model-1'].predefinedFields.changeKey(fromName='void-ratioclay3M', 
+    toName='void-ratioclay2M')
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#200c0 ]', ), )
+region = a.Set(faces=faces1, name='Set-8')
+mdb.models['Model-1'].VoidsRatio(name='voidratio-clay3', region=region, 
+    voidsRatio1=1.34, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#80300 ]', ), )
+region = a.Set(faces=faces1, name='Set-9')
+mdb.models['Model-1'].VoidsRatio(name='voidratio-clay4', region=region, 
+    voidsRatio1=1.31, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#100c00 ]', ), )
+region = a.Set(faces=faces1, name='Set-10')
+mdb.models['Model-1'].VoidsRatio(name='voidratio-clay5', region=region, 
+    voidsRatio1=1.29, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#43000 ]', ), )
+region = a.Set(faces=faces1, name='Set-11')
+mdb.models['Model-1'].VoidsRatio(name='voidratio-clay6', region=region, 
+    voidsRatio1=1.27, distributionType=UNIFORM, variation=CONSTANT_RATIO)
+mdb.save()
+#: The model database has been saved to "C:\temp\resultmodelsoillayer.cae".
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#4003 ]', ), )
+region = a.Set(faces=faces1, name='Set-12')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-8', region=region, 
+    stressMag1=0.0, vCoord1=0.0, stressMag2=-9190.0, vCoord2=-1.0, 
+    lateralCoeff1=1.0, lateralCoeff2=None)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#800c ]', ), )
+region = a.Set(faces=faces1, name='Set-13')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-9', region=region, 
+    stressMag1=-9190.0, vCoord1=-1.0, stressMag2=-18380.0, vCoord2=-2.0, 
+    lateralCoeff1=1.0, lateralCoeff2=None)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#10030 ]', ), )
+region = a.Set(faces=faces1, name='Set-14')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-10', 
+    region=region, stressMag1=-18380.0, vCoord1=-2.0, stressMag2=27570.0, 
+    vCoord2=-3.0, lateralCoeff1=1.0, lateralCoeff2=None)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#200c0 ]', ), )
+region = a.Set(faces=faces1, name='Set-15')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-11', 
+    region=region, stressMag1=-27570.0, vCoord1=-3.0, stressMag2=36760.0, 
+    vCoord2=-4.0, lateralCoeff1=1.0, lateralCoeff2=None)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#80300 ]', ), )
+region = a.Set(faces=faces1, name='Set-16')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-12', 
+    region=region, stressMag1=-36760.0, vCoord1=-4.0, stressMag2=-45950.0, 
+    vCoord2=-5.0, lateralCoeff1=1.0, lateralCoeff2=None)
+#: Warning: Cannot continue yet--complete the step or cancel the procedure.
+#: Warning: Cannot continue yet--complete the step or cancel the procedure.
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#100c00 ]', ), )
+region = a.Set(faces=faces1, name='Set-17')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-13', 
+    region=region, stressMag1=-45950.0, vCoord1=-5.0, stressMag2=-55140.0, 
+    vCoord2=-6.0, lateralCoeff1=1.0, lateralCoeff2=None)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#43000 ]', ), )
+region = a.Set(faces=faces1, name='Set-18')
+mdb.models['Model-1'].GeostaticStress(name='Predefined Field-14', 
+    region=region, stressMag1=-55140.0, vCoord1=-6.0, stressMag2=-64330.0, 
+    vCoord2=-7.0, lateralCoeff1=1.0, lateralCoeff2=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#84210860 #10000 ]', ), )
+p.seedEdgeByNumber(edges=pickedEdges, number=10, constraint=FINER)
+p = mdb.models['Model-1'].parts['Part-1']
+e = p.edges
+pickedEdges1 = e.getSequenceFromMask(mask=('[#0 #4aa50 ]', ), )
+pickedEdges2 = e.getSequenceFromMask(mask=('[#0 #80 ]', ), )
+p.seedEdgeByBias(biasMethod=SINGLE, end1Edges=pickedEdges1, 
+    end2Edges=pickedEdges2, ratio=10.0, number=15, constraint=FINER)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=54.9893, 
+    farPlane=68.2341, width=44.068, height=25.1153, viewOffsetX=-0.868159, 
+    viewOffsetY=-1.13941)
+p = mdb.models['Model-1'].parts['Part-1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#1084210a #2 ]', ), )
+p.seedEdgeByNumber(edges=pickedEdges, number=15, constraint=FINER)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=55.6897, 
+    farPlane=67.5337, width=39.4345, height=22.4746, viewOffsetX=0.165455, 
+    viewOffsetY=0.55126)
+p = mdb.models['Model-1'].parts['Part-1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#4a529491 #9 ]', ), )
+p.seedEdgeByNumber(edges=pickedEdges, number=3, constraint=FINER)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#1fffff ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=QUAD, technique=STRUCTURED)
+elemType1 = mesh.ElemType(elemCode=CPE8RP, elemLibrary=STANDARD)
+elemType2 = mesh.ElemType(elemCode=CPE6MP, elemLibrary=STANDARD)
+p = mdb.models['Model-1'].parts['Part-1']
+f = p.faces
+faces = f.getSequenceFromMask(mask=('[#1fffff ]', ), )
+pickedRegions =(faces, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2))
+p = mdb.models['Model-1'].parts['Part-1']
+p.generateMesh()
+mdb.save()
+#: The model database has been saved to "C:\temp\resultmodelsoillayer.cae".

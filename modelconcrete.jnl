@@ -1,0 +1,97 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=150.0)
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    0.0, 0.0), point1=(0.0, 75.0))
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    0.0, 0.0), point1=(0.0, 75.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseSolidExtrude(depth=37.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+mdb.models['Model-1'].sketches['__edit__'].undo()
+mdb.models['Model-1'].sketches['__edit__'].undo()
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['Part-1'].RemoveRedundantEntities(edgeList=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(mask=(
+    '[#3 ]', ), ))
+#* None of the selected vertices
+#* or edges are redundant.
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+del mdb.models['Model-1'].sketches['__edit__']
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=150.0)
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    0.0, 0.0), point1=(0.0, 75.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseSolidExtrude(depth=370.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Part-1'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[0], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Part-1'].vertices[0], point3=
+    mdb.models['Model-1'].parts['Part-1'].vertices[1])
+mdb.models['Model-1'].parts['Part-1'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Part-1'].cells.getSequenceFromMask(('[#3 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[4], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[6], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[5], MIDDLE))
+mdb.models['Model-1'].parts['Part-1'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Part-1'].cells.getSequenceFromMask(('[#f ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[2], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[18], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
+    mdb.models['Model-1'].parts['Part-1'].edges[6], MIDDLE))
+mdb.models['Model-1'].Material(name='concrete')
+mdb.models['Model-1'].materials['concrete'].Density(table=((2.4e-09, ), ))
+mdb.models['Model-1'].materials['concrete'].Elastic(table=((20111.0, 0.2), ))
+mdb.models['Model-1'].materials['concrete'].ConcreteDamagedPlasticity(table=((
+    40.0, 0.1, 1.15, 0.6667, 0.0), ))
+mdb.models['Model-1'].materials['concrete'].concreteDamagedPlasticity.ConcreteCompressionHardening(
+    table=((24.5, 0.0), (29.1, 0.0), (26.6, 0.0), (22.3, 0.0006), (18.4, 
+    0.0015), (15.1, 0.0025), (12.7, 0.0035), (11.2, 0.0045), (7.5, 0.0054), (
+    5.0, 0.0061)))
+mdb.models['Model-1'].materials['concrete'].concreteDamagedPlasticity.ConcreteTensionStiffening(
+    table=((3.6, 0.0), (2.94, 0.0001), (2.25, 0.0003), (1.94, 0.0005), (1.62, 
+    0.0005), (1.08, 0.0009), (0.73, 0.001), (0.5, 0.0051)))
+mdb.models['Model-1'].materials['concrete'].concreteDamagedPlasticity.ConcreteTensionDamage(
+    table=((0.0, 0.0001), (0.01, 0.0003), (0.1, 0.0003), (0.3, 0.0003), (0.5, 
+    0.0005), (0.7, 0.002)))
+# Save by mohamed on 2021_11_02-04.07.44; build 2017 2016_09_27-14.54.59 126836
